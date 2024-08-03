@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 // import { act } from 'react'; // Import act from react
 import { describe, it, expect } from 'vitest';
@@ -9,7 +10,7 @@ describe('App Component', () => {
         render(<App />);
 
         screen.debug(); // This will log the rendered HTML to the console
-        const welcomeElement = screen.getByText(/Click on the Vite and React logos to learn more/i);
+        const welcomeElement = screen.getByText(/Welcome to Sites/i);
         expect(welcomeElement).toBeInTheDocument();
     });
 });
