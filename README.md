@@ -9,6 +9,7 @@ Currently, two official plugins are available:
 
 
 ```
+1>
 npm create vite@latest 
 npm install -D jsdom vitest @testing-library/react @testing-library/jest-dom
 npm run dev
@@ -21,6 +22,7 @@ git push -u origin main -f
 ```
 
 ```
+2>
 npm install -D jsdom vitest @testing-library/react @testing-library/jest-dom
 touch vite.config.js
 cd src
@@ -28,4 +30,10 @@ mkdir __test__
 cd __test__
 touch App.test.jsx
 touch setupTests.jsx
+```
+
+```angular2html
+touch LICENSE
+cd ./src/docs
+touch Vite-react-setup.md
 ```
