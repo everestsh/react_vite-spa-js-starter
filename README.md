@@ -17,5 +17,15 @@ git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin git@github.com:everestsh/react_vite-spa-js-starter.git
-git push -u origin main
+git push -u origin main -f
+```
+
+```
+npm install -D jsdom vitest @testing-library/react @testing-library/jest-dom
+touch vite.config.js
+cd src
+mkdir __test__
+cd __test__
+touch App.test.jsx
+touch setupTests.jsx
 ```
