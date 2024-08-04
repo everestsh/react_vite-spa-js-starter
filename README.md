@@ -36,4 +36,5 @@ touch setupTests.jsx
 touch LICENSE
 cd ./src/docs
 touch Vite-react-setup.md
+npm install -D jsdom vitest @testing-library/react @testing-library/jest-dom  prop-types
 ```
