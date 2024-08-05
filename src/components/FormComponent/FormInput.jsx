@@ -10,6 +10,7 @@ const FormInput = (props) => {
             <input
                 name={props.labelId}
                 value={props.value}
+                onChange={(input) => props.handleInput(input)}
                 placeholder={props.placeholder}
             />
         </>

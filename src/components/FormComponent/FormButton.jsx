@@ -2,16 +2,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// function FormButton() {
-//     return (
-//         <div>
-//             <h1>Welcome </h1>
-//         </div>
-//     )
-// }
+
 const FormButton = (props) => {
+
     return (
         <button
+            onClick={props.handleButtonClick}
+            className={props.classType || "primary"}
         >
             {props.buttonText}
         </button>

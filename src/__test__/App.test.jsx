@@ -10,7 +10,7 @@ describe('App Component', () => {
         render(<App />);
 
         screen.debug(); // This will log the rendered HTML to the console
-        const welcomeElement = screen.getByText(/Welcome to Sites/i);
+        const welcomeElement = screen.getByText(/Welcome to Labs Basic SPA/i);
         expect(welcomeElement).toBeInTheDocument();
     });
 });
