@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 
 const FormButton = (props) => {
-
+    // console.log(props.buttonText)
     return (
         <button
             onClick={props.handleButtonClick}

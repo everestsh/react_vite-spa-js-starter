@@ -8,6 +8,7 @@ const FormInput = (props) => {
         <>
             <label htmlFor={props.labelId} >{props.labelId}:</label>
             <input
+                id={props.labelId}
                 name={props.labelId}
                 value={props.value}
                 onChange={(input) => props.handleInput(input)}
