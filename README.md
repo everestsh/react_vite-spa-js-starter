@@ -38,3 +38,8 @@ cd ./src/docs
 touch Vite-react-setup.md
 npm install -D jsdom vitest @testing-library/react @testing-library/jest-dom  prop-types
 ```
+
+```angular2html
+npm install -D @testing-library/user-event
+npm install -D react-router-dom@5.3.4
+```

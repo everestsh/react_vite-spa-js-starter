@@ -1,3 +1,3 @@
-import FormContainer from "../../../FormComponent/FormContainer.jsx";
+import LoginContainer from "./LoginContainer";
 
-export default FormContainer;
+export default LoginContainer;
