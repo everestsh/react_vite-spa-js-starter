@@ -1,27 +1,19 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
-// import { act } from 'react'; // Import act from react
-import { describe, it, test, vi, expect, afterEach } from 'vitest';
+import React from "react";
+import {render, waitFor} from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { render, waitFor } from '@testing-library/react';
 import { submitLogin as mockSubmitLogin } from "../api";
-import App from '../../FormComponent/FormContainer.jsx';
-import FormComponent from "../../FormComponent/index.jsx";
-import FormContainer from "../../FormComponent/FormContainer.jsx";
+import { describe, it, vi, expect, afterEach } from 'vitest';
+
+import LoginContainer from "../components/LoginComponent";
 
 vi.mock("../api");
 
 afterEach(() => {
     vi.clearAllMocks();
 });
-describe('App Component', () => {
-    // it('renders welcome message', () => {
-    //     render(<App />);
-    //
-    //     screen.debug(); // This will log the rendered HTML to the console
-    //     const welcomeElement = screen.getByText(/FormComponenter 1/i);
-    //     expect(welcomeElement).toBeInTheDocument();
-    // });
+
+describe("<LoginContainer /> test suite", () => {
     it("[1] button responds to click handler", async () => {
         const fakeUser = {
             username: "test@email.com",
@@ -29,7 +21,7 @@ describe('App Component', () => {
         };
 
         mockSubmitLogin.mockResolvedValueOnce();
-        const { getByText, getByLabelText } = render(<FormContainer />);
+        const { getByText, getByLabelText } = render(<LoginContainer />);
         const button = getByText(/click/i);
         const emailInput = getByLabelText(/email/i);
         const passwordInput = getByLabelText(/password/i);

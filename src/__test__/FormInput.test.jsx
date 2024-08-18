@@ -1,4 +1,4 @@
-import FormInput from "../components/FormComponent/FormInput.jsx"
+import FormInput from "../components/ReusableComponents/FormInput.jsx"
 // import FormInput from "../components/FormComponent/FormInput";
 
 // eslint-disable-next-line no-unused-vars

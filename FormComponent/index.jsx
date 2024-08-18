@@ -1,4 +1,4 @@
-import FormContainer from "./FormContainer";
+import FormContainer from "./FormContainer.jsx";
 
 export default FormContainer;
 

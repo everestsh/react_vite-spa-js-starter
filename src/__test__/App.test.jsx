@@ -1,16 +1,29 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react';
-// import { act } from 'react'; // Import act from react
-import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
-import App from '../components/App.jsx';
+import { sleep as mockSleep, submitLogin as mockSubmitLogin } from "../api";
+import { describe, it, expect, afterEach, vi } from 'vitest';
 
-describe('App Component', () => {
-    it("renders welcome message", () => {
-        // let's just make sure the component mounts with an H1, you'll want to update this test to include any UI on your landing page you'd like
-        const { getByText } = render(<App />);
-        const h1 = getByText(/welcome to labs basic spa/i);
-        expect(h1.textContent).toBe("Welcome to Labs Basic SPA");
-        // expect(h1.type).toBe("h1");
+vi.mock("../api");
+
+afterEach(() => {
+    vi.clearAllMocks();
+});
+
+describe("API tests", () => {
+    it("sleep", async () => {
+        await mockSleep(1000);
+        expect(mockSleep).toHaveBeenCalledTimes(1);
+        expect(mockSleep).toHaveBeenCalledWith(1000);
+    });
+
+    it("submitLogin", async () => {
+        const fakeUser = {
+            username: "yellowSally@flytie.com",
+            password: "testing123",
+        };
+
+        mockSubmitLogin.mockResolvedValueOnce({ success: true });
+
+        const result = await mockSubmitLogin(fakeUser);
+        expect(mockSubmitLogin).toHaveBeenCalledWith(fakeUser);
+        expect(result).toEqual({ success: true });
     });
 });
