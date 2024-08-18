@@ -5,9 +5,7 @@ import { describe, it, test, vi, expect, afterEach } from 'vitest';
 import userEvent from "@testing-library/user-event";
 import { render, waitFor } from '@testing-library/react';
 import { submitLogin as mockSubmitLogin } from "../api";
-import App from '../../FormComponent/FormContainer.jsx';
-import FormComponent from "../../FormComponent/index.jsx";
-import FormContainer from "../../FormComponent/FormContainer.jsx";
+import FormContainer from "../../src/components/LoginComponent/LoginContainer";
 
 vi.mock("../api");
 
