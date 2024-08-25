@@ -1,3 +1,5 @@
+import process from "../../.eslintrc.cjs";
+
 const OktaURL = "dev-886474.okta.com";
 
 const config = {
