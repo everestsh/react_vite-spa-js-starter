@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 // import Routers from './components/Routers.jsx'
 import { BrowserRouter, Route } from "react-router-dom";
 
+import ListItems from "./components/LoginComponent/LoginContainer.jsx"
 import Login from "./components/LoginComponent/LoginContainer.jsx";
 import Home from  "./components/HomeComponent/Home.jsx";
 
@@ -21,6 +22,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             </Route>
             {/*<Route path="/implicit/callback" component={LoginCallback} />*/}
             {/*</Security>*/}
+            <Route path="/items">
+                <ListItems />
+            </Route>
         </React.StrictMode>
     </BrowserRouter>,
 )
